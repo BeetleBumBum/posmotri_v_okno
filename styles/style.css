@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  
 }
 
 h1,
@@ -36,3 +41,359 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: end; */
+  align-items: flex-end;
+  width: 1140px;
+  gap: 30px;
+  margin-top: 139px;
+
+  /* height:534px;   */
+  /*ЭТО ОЧЕНЬ ПЛОХО ТАК ЗАДАВАТЬ ВЫСОТУ*/
+}
+
+/* .result {
+  display: flex;
+  flex-direction: column;
+} */
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 19px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+
+  /* SIC */
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.search-form__fieldset {
+  border: none;
+  /* width: 225px; МНЕ ЭТО НЕ НРАВИТСЯ, НАДО ПО-ДРУГОМУ */
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  /* text-align: left; */
+
+}
+
+.search-form__label {
+  display: flex;  /*ИЗ_ЗА ЭТОГО ВСЁ ЛОМАЕТСЯ*/
+  width: fit-content;
+  cursor: pointer; /*ЭТО ТОЧНО СЮДА???*/
+  gap: 5px;
+}
+
+/* .search-form__label:hover {
+  text-decoration: underline;
+} */
+
+/* SIC ПОЧЕМУУУУУУУУУУ */
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) { /*ЭТО КАКАЯ-ТО ХЕРНЯ ИЛИ НЕТ?*/
+  outline: 1px solid white;
+
+  /* SIC */
+  outline-offset: 2px;
+}
+
+/*СВЕРХУ ВАРИАНТ ИЗ ЯНДЕКСА, СНИЗУ 2 КЛАССА - МОИ. ОБА НЕ РАБОТАЮТ*/
+
+/* .search-form__label:focus {
+  outline: none;
+} */
+
+/* .search-form__label:focus-visible {
+  outline: 1px solid white;
+} */
+
+/* .search-form__label-text */
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__textfield {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: rgb(255 255 255 / 0.7);
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  /* ТУТ ЭТА СТРАННАЯ ОБВОДКА */
+
+  /* НИЖЕ СОВЕТЫ ИЗ ЧАТА (СИЧ) */
+  min-width: 225px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+/* НАДО ЛИ ТО, ЧТО НИЖЕ? */
+.search-form__textfield:active {
+  outline: 1px solid white;
+}
+
+
+
+
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  /* СИЧ */
+}
+
+/* .search-form__checkbox */
+
+.search-form__pseudo-checkbox {
+  /* display: inline-block; */
+  /* margin-right: 5px; */
+  /* vertical-align: middle; */
+  height: 19px;
+  width: 19px;
+  background-color: transparent;
+  border: 1px solid white;
+
+  /* СИЧ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* .search-form__checkbox[type='checkbox']:checked + .search-form__pseudo-checkbox {
+  background-color: white;
+  background-position: center;
+  
+} */
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: white;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+  border: 1px solid white;
+
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background: rgba(84, 80, 80, 1);
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  align-self: end;
+}
+
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  height: 100%;
+  gap: 21px;
+
+  /* СИЧ */
+  /* max-width: 399px; */
+  /* row-gap: 26px; */
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 69.5px;
+  /* text-align: left; */
+  text-transform: uppercase;
+
+  /* margin-bottom: 22px; */
+}
+
+.content__accent {
+  color: #545050;
+
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+
+/* .preloader-template */
+
+/* .preloader ДРУГОЙ ФАЙЛ*/
+
+/* .preloader-chasing-squares ДРУГОЙ ФАЙЛ*/
+
+/* .square */
+
+/* .cards-list-item-template */
+
+ /*НЕ СРАБОТАЛ ВСЕВДОКЛАСС*/
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30.5px;
+}
+
+/* СИЧ */
+/* .content__list-item:not(:nth-last-child(2)) {
+  margin-bottom: 30px;
+} */
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
+  /* text-decoration: none; */
+}
+
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+
+  /* СИЧ */
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* width: 394px; */
+  /* height: 107px; */
+}
+
+
+.content__video-card-description-container {
+  /* width: 100%; */
+  width: 200px;
+
+  /* СИЧ */
+  /* flex: 1 1 auto; */
+  /* min-width: 1; */
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  /* text-align: left; */
+
+  /* СИЧ */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  /* margin-bottom: 5px; */
+  /* margin-top: 2px; */
+}
+
+.content__video-card-description {
+  /* font-family: Fira Sans Condensed; */
+  /* font-size: 18px; */
+  font-weight: 400;
+  line-height: 16.2px;
+
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+
+  /* СИЧ */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .more-button-template */
+
+.more-button {
+  width: 399px;
+  height: 34px;
+  /* margin: 2px; */
+}
+
+/* .error-template */
+
+/* .error ДРУГОЙ ФАЙЛ*/
+
+/* .error__title ДРУГОЙ ФАЙЛ*/
