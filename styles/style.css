@@ -44,21 +44,11 @@ ol {
 
 .content {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: end; */
   align-items: flex-end;
   width: 1140px;
   gap: 30px;
   margin-top: 139px;
-
-  /* height:534px;   */
-  /*ЭТО ОЧЕНЬ ПЛОХО ТАК ЗАДАВАТЬ ВЫСОТУ*/
 }
-
-/* .result {
-  display: flex;
-  flex-direction: column;
-} */
 
 .result__video-container {
   position: relative;
@@ -70,8 +60,6 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-
-  /* SIC */
   object-fit: cover;
   object-position: center;
 }
@@ -84,7 +72,6 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  /* width: 225px; МНЕ ЭТО НЕ НРАВИТСЯ, НАДО ПО-ДРУГОМУ */
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -95,20 +82,14 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  /* text-align: left; */
-
 }
 
 .search-form__label {
-  display: flex;  /*ИЗ_ЗА ЭТОГО ВСЁ ЛОМАЕТСЯ*/
+  display: flex;
   width: fit-content;
   cursor: pointer; /*ЭТО ТОЧНО СЮДА???*/
   gap: 5px;
 }
-
-/* .search-form__label:hover {
-  text-decoration: underline;
-} */
 
 /* SIC ПОЧЕМУУУУУУУУУУ */
 .search-form__label:hover .search-form__label-text {
@@ -117,8 +98,6 @@ ol {
 
 .search-form__label:has(:focus-visible) { /*ЭТО КАКАЯ-ТО ХЕРНЯ ИЛИ НЕТ?*/
   outline: 1px solid white;
-
-  /* SIC */
   outline-offset: 2px;
 }
 
@@ -131,8 +110,6 @@ ol {
 /* .search-form__label:focus-visible {
   outline: 1px solid white;
 } */
-
-/* .search-form__label-text */
 
 .visually-hidden {
   position: absolute;
@@ -155,7 +132,7 @@ ol {
   appearance: none;
   /* ТУТ ЭТА СТРАННАЯ ОБВОДКА */
 
-  /* НИЖЕ СОВЕТЫ ИЗ ЧАТА (СИЧ) */
+  /* (СИЧ) */
   min-width: 225px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -166,24 +143,13 @@ ol {
   outline: 1px solid white;
 }
 
-
-
-
-
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
   justify-content: center;
-
-  /* СИЧ */
 }
 
-/* .search-form__checkbox */
-
 .search-form__pseudo-checkbox {
-  /* display: inline-block; */
-  /* margin-right: 5px; */
-  /* vertical-align: middle; */
   height: 19px;
   width: 19px;
   background-color: transparent;
@@ -199,7 +165,6 @@ ol {
 /* .search-form__checkbox[type='checkbox']:checked + .search-form__pseudo-checkbox {
   background-color: white;
   background-position: center;
-  
 } */
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -219,7 +184,6 @@ ol {
   line-height: 21.6px;
   text-align: center;
   border: 1px solid white;
-
 }
 
 .button:hover {
@@ -246,11 +210,9 @@ ol {
   align-self: end;
 }
 
-
 .content__details {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
   height: 100%;
   gap: 21px;
 
@@ -264,7 +226,6 @@ ol {
   font-size: 75px;
   font-weight: 700;
   line-height: 69.5px;
-  /* text-align: left; */
   text-transform: uppercase;
 
   /* margin-bottom: 22px; */
@@ -280,16 +241,6 @@ ol {
   height: 298px;
   overflow: auto;
 }
-
-/* .preloader-template */
-
-/* .preloader ДРУГОЙ ФАЙЛ*/
-
-/* .preloader-chasing-squares ДРУГОЙ ФАЙЛ*/
-
-/* .square */
-
-/* .cards-list-item-template */
 
  /*НЕ СРАБОТАЛ ВСЕВДОКЛАСС*/
 .content__list-item:not(:last-of-type) {
@@ -341,7 +292,6 @@ ol {
   /* height: 107px; */
 }
 
-
 .content__video-card-description-container {
   /* width: 100%; */
   width: 200px;
@@ -357,22 +307,20 @@ ol {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  /* text-align: left; */
 
   /* СИЧ */
   white-space: nowrap;
   text-overflow: ellipsis;
-  /* overflow: hidden; */
-  /* margin-bottom: 5px; */
-  /* margin-top: 2px; */
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-top: 2px;
 }
 
 .content__video-card-description {
-  /* font-family: Fira Sans Condensed; */
-  /* font-size: 18px; */
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
-
 }
 
 .content__video-card-thumbnail {
@@ -384,16 +332,9 @@ ol {
   object-position: center;
 }
 
-/* .more-button-template */
 
 .more-button {
   width: 399px;
   height: 34px;
   /* margin: 2px; */
 }
-
-/* .error-template */
-
-/* .error ДРУГОЙ ФАЙЛ*/
-
-/* .error__title ДРУГОЙ ФАЙЛ*/
